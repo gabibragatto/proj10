@@ -1,17 +1,17 @@
-// Atividade 1
-// Soma dos números pares do vetor
-
 let numeros = [];
 let soma = 0;
 
+// Lê 10 números
 for (let i = 0; i < 10; i++) {
-    let valor = parseInt(prompt(`Digite o ${i + 1}º número:`));
-    numeros.push(valor);
-    
-    if (valor % 2 === 0) {
-        soma += valor;
+
+    numeros[i] = Number(prompt("Digite um número inteiro:"));
+
+    // Verifica se o número é par
+    if (numeros[i] % 2 == 0) {
+
+        soma = soma + numeros[i];
     }
 }
 
-console.log("Vetor:", numeros);
-console.log("Soma dos números pares:", soma);
+// Mostra a soma dos pares
+alert("A soma dos números pares é: " + soma);
